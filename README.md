@@ -1,5 +1,8 @@
 # CurrencyConverter
 
+![CurrencyConverter](https://github.com/elmaksimka/CurrencyConverter/assets/94755517/ee2468f3-2109-4fed-adec-c6dded158ad0)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.4.
 
 ## Development server
