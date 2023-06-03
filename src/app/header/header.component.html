@@ -1,5 +1,17 @@
-<div>
-  <h2>Курс валют:</h2>
-  <p>USD: {{ usdRate }}</p>
-  <p>EUR: {{ eurRate }}</p>
+<div class="currency-rates">
+  <h2 class="currency-rates__heading">Курс валют:</h2>
+  <ng-container *ngTemplateOutlet="currencyRatesTemplate; context: { rate: 'USD' }"></ng-container>
+  <ng-container *ngTemplateOutlet="currencyRatesTemplate; context: { rate: 'EUR' }"></ng-container>
 </div>
+
+<ng-template 
+  #currencyRatesTemplate
+  let-rate="rate"
+>
+  <div class="currency-rates__rate">
+    <span class="currency-rates__currency">{{ rate }}:</span>
+    <span class="currency-rates__value">
+      {{ exchangeRate$ | async | uahExchangeRate : rate }}
+    </span>
+  </div>
+</ng-template>

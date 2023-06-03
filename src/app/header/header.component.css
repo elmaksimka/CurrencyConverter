@@ -1,0 +1,28 @@
+.currency-rates {
+  background-color: #f5f5f5;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.currency-rates__heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #333;
+}
+.currency-rates__rate {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.currency-rates__currency {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 8px;
+  color: #666;
+}
+.currency-rates__value {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}

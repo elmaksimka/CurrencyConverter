@@ -1,0 +1,35 @@
+<div class="currency-converter">
+  <h2 class="currency-converter__heading">Конвертер валют:</h2>
+  <div class="currency-converter__input-container">
+    <input
+      class="currency-converter__input"
+      [(ngModel)]="currencyFrom"
+      type="number"
+      (change)="handleValueChange($event, 'from')"
+    />
+    <ng-container *ngTemplateOutlet="currencySelectTemplate; context: { type: 'from' }"></ng-container>
+  </div>
+  <div class="currency-converter__input-container">
+    <input
+      class="currency-converter__input"
+      [(ngModel)]="currencyTo"
+      type="number"
+      (change)="handleValueChange($event, 'to')"
+    />
+    <ng-container *ngTemplateOutlet="currencySelectTemplate; context: { type: 'to' }"></ng-container>
+  </div>
+</div>
+
+<ng-template 
+  #currencySelectTemplate
+  let-type="type"
+>
+  <select
+    class="currency-converter__select"
+    (change)="handleSelectChange($event, type)"
+  >
+    <option *ngFor="let currency of currencies" [value]="currency">
+      {{ currency }}
+    </option>
+  </select>
+</ng-template>
